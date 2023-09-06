@@ -31,7 +31,7 @@
     "isRequired": false,
     "isDeprecated": false,
     "rightColumn": 64,
-    "defaultDate": "{{moment()}}",
+    "defaultDate": "{{new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString()}}",
     "dynamicHeight": "FIXED",
     "widgetId": "vn8pfc83xc",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
