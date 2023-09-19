@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Tagged Sales",
-    "slug": "tagged-sales",
+    "name": "Hourly Sales Copy",
+    "slug": "hourly-sales-copy",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 530,
+          "bottomRow": 700,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -29,19 +29,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Tagged Sales_Query2",
+              "id": "Hourly Sales Copy_Query2",
               "name": "Query2",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")",
-                "moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Tagged Sales_Query3",
-              "name": "Query3",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
@@ -54,7 +43,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Tagged Sales",
+        "id": "Hourly Sales Copy",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -65,5 +54,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "6492e2637204916015a22d5b_6492e2637204916015a22d5f"
+  "gitSyncId": "6492e2637204916015a22d5b_64ffefece65340677fc450fb"
 }

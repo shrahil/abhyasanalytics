@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Tagged Sales",
-    "slug": "tagged-sales",
+    "name": "Daily Sales",
+    "slug": "daily-sales",
     "layouts": [
       {
         "viewMode": false,
@@ -29,19 +29,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Tagged Sales_Query2",
+              "id": "Daily Sales_Query2",
               "name": "Query2",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")",
-                "moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Tagged Sales_Query3",
-              "name": "Query3",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
@@ -54,7 +43,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Tagged Sales",
+        "id": "Daily Sales",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -65,5 +54,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "6492e2637204916015a22d5b_6492e2637204916015a22d5f"
+  "gitSyncId": "6492e2637204916015a22d5b_64ffed17ede87228853e6855"
 }

@@ -19,6 +19,14 @@
     {
       "id": "Tagged Refunds by Update Date",
       "isDefault": false
+    },
+    {
+      "id": "Daily Sales",
+      "isDefault": false
+    },
+    {
+      "id": "Hourly Sales Copy",
+      "isDefault": false
     }
   ],
   "viewMode": false,
