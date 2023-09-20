@@ -3,7 +3,7 @@
     "borderColor": "#E0DEDE",
     "isVisibleDownload": true,
     "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-    "topRow": 19,
+    "topRow": 56,
     "isSortable": true,
     "type": "TABLE_WIDGET_V2",
     "inlineEditingSaveOption": "ROW_LEVEL",
@@ -16,7 +16,7 @@
         {"key": "primaryColumns.date.computedValue"},
         {"key": "primaryColumns.Revenue.computedValue"}
     ],
-    "leftColumn": 0,
+    "leftColumn": 1,
     "delimiter": ",",
     "defaultSelectedRowIndex": 0,
     "showInlineEditingOptionDropdown": true,
@@ -65,7 +65,7 @@
         {"key": "primaryColumns.date.outputFormat"}
     ],
     "displayName": "Table",
-    "bottomRow": 53,
+    "bottomRow": 90,
     "columnWidthMap": {
         "date": 212,
         "task": 245,
@@ -142,7 +142,7 @@
     "key": "9thsfe430j",
     "canFreezeColumn": false,
     "isDeprecated": false,
-    "rightColumn": 31,
+    "rightColumn": 32,
     "textSize": "0.875rem",
     "widgetId": "48dptw1y7w",
     "tableData": "{{Query3.data}}",

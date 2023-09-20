@@ -25,7 +25,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 17.9375,
     "dynamicTriggerPathList": [],
-    "leftColumn": 31,
+    "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "borderRadius"},
         {"key": "boxShadow"},
@@ -174,7 +174,7 @@
     "showDataPointLabel": false,
     "key": "rsfnuu8jwn",
     "isDeprecated": false,
-    "rightColumn": 63,
+    "rightColumn": 64,
     "widgetId": "824fcyv0va",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "minWidth": 450,
@@ -188,9 +188,11 @@
     "mobileTopRow": 26,
     "responsiveBehavior": "fill",
     "yAxisName": "Revenue(INR)",
+    "originalTopRow": 20,
     "chartName": "Daily Sales",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 32,
     "xAxisName": "Product Line",
+    "originalBottomRow": 52,
     "chartType": "LINE_CHART"
 }

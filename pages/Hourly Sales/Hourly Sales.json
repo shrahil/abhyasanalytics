@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Hourly Sales Copy",
-    "slug": "hourly-sales-copy",
+    "name": "Hourly Sales",
+    "slug": "hourly-sales",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 530,
+          "bottomRow": 1250,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -29,7 +29,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Hourly Sales Copy_Query2",
+              "id": "Hourly Sales_Query2",
               "name": "Query2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -43,7 +43,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Hourly Sales Copy",
+        "id": "Hourly Sales",
         "deleted": false,
         "policies": [],
         "userPermissions": []

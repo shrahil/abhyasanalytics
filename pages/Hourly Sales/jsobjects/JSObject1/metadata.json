@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "JSObject1",
-    "pageId": "Hourly Sales Copy",
+    "pageId": "Hourly Sales",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -18,7 +18,7 @@
     ],
     "userPermissions": []
   },
-  "id": "Hourly Sales Copy_JSObject1",
+  "id": "Hourly Sales_JSObject1",
   "deleted": false,
   "gitSyncId": "6492e2637204916015a22d5b_64ffefece65340677fc45107"
 }
