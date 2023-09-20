@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Hourly Sales",
+    "pageId": "Live Sales",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -44,7 +44,7 @@
     "userPermissions": [],
     "createdAt": "2023-09-12T04:58:20Z"
   },
-  "id": "Hourly Sales_Query3",
+  "id": "Live Sales_Query3",
   "deleted": false,
-  "gitSyncId": "6492e2637204916015a22d5b_64ffefece65340677fc45102"
+  "gitSyncId": "6492e2637204916015a22d5b_650aa0a688d2f214abb52154"
 }
