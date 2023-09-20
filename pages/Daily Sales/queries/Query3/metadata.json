@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT \"Payment\".\"amount\" as \"amount\", count(*) as count, \"amount\" * count(*) as  \"productRevenue\" FROM \"Payment\" where \"Payment\".\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' and \"Payment\".\"createdAt\" <= {{moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' and \"status\" = 'responseReceivedSuccess' and \"amount\" = '2249' group by \"Payment\".\"amount\"\nUNION\nSELECT \"Payment\".\"amount\" as \"amount\", count(*) as count, \"amount\" * count(*) as  \"productRevenue\" FROM \"Payment\" where \"Payment\".\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' and \"Payment\".\"createdAt\" <= {{moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' and \"status\" = 'responseReceivedSuccess' and \"amount\" = '2749' group by \"Payment\".\"amount\"\nUNION\nSELECT \"Payment\".\"amount\" as \"amount\", count(*) as count, \"amount\" * count(*) as  \"productRevenue\" FROM \"Payment\" where \"Payment\".\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' and \"Payment\".\"createdAt\" <= {{moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' and \"status\" = 'responseReceivedSuccess' and \"amount\" = '1999' group by \"Payment\".\"amount\"\nUNION\nSELECT null, count(*), sum(\"amount\") FROM \"Payment\" where  \"amount\" in (1999, 2249, 2749) and \"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' and \"createdAt\" <= {{moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' and \"status\" = 'responseReceivedSuccess' ORDER BY \"productRevenue\" desc;",
+      "body": "SELECT  \"Payment\".\"createdAt\"::date as \"date\" , SUM(\"amount\") as \"Revenue\"\nFROM \"Payment\" \nwhere \"Payment\".\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' \nand \"Payment\".\"createdAt\" <= {{moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' \nand \"status\" = 'responseReceivedSuccess' \nand \"paymentForId\" = 3125 \nGROUP BY \"date\"\nORDER BY 1 ASC;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"

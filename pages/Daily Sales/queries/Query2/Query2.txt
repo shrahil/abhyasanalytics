@@ -4,5 +4,5 @@ where "Payment"."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-M
 and "Payment"."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
 and "status" = 'responseReceivedSuccess' 
 and "paymentForId" = 3125 
-GROUP BY "Payment"."createdAt"::date
-
+GROUP BY "x"
+ORDER BY 1 ASC;
