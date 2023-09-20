@@ -99,7 +99,7 @@
     "mobileTopRow": 20,
     "responsiveBehavior": "fill",
     "yAxisName": "Revenue(INR)",
-    "chartName": "Last 24 hours",
+    "chartName": "",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 35,
     "xAxisName": "Product Line",
