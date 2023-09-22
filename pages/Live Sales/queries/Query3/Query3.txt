@@ -1,4 +1,4 @@
-SELECT EXTRACT(HOUR FROM "createdAt") AS "x"
+SELECT EXTRACT(HOUR FROM "createdAt"  + interval '330 minutes') AS "x"
  , SUM("amount") as "y"
 FROM "Payment" 
 where "Payment"."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 

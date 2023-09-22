@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT EXTRACT(HOUR FROM \"createdAt\") AS \"x\"\n , SUM(\"amount\") as \"y\"\nFROM \"Payment\" \nwhere \"Payment\".\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' \nand \"Payment\".\"createdAt\" <= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' \nand \"status\" = 'responseReceivedSuccess' \nand \"paymentForId\" = 3125 \nGROUP BY \"x\"\nORDER BY \"x\" DESC;",
+      "body": "SELECT EXTRACT(HOUR FROM \"createdAt\"  + interval '330 minutes') AS \"x\"\n , SUM(\"amount\") as \"y\"\nFROM \"Payment\" \nwhere \"Payment\".\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' \nand \"Payment\".\"createdAt\" <= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' \nand \"status\" = 'responseReceivedSuccess' \nand \"paymentForId\" = 3125 \nGROUP BY \"x\"\nORDER BY \"x\" DESC;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
