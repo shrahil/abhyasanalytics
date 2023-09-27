@@ -1,4 +1,4 @@
-SELECT  "Payment"."createdAt"::date as "date" , SUM("amount") as "Revenue"
+SELECT  ("Payment"."createdAt" + interval '330 minutes')::date as "date" , SUM("amount") as "Revenue"
 FROM "Payment" 
 where "Payment"."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
 and "Payment"."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
