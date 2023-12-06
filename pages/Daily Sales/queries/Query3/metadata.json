@@ -42,8 +42,7 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-09-12T04:46:15Z"
+    "userPermissions": []
   },
   "id": "Daily Sales_Query3",
   "deleted": false,

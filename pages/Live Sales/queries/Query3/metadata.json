@@ -41,8 +41,7 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-09-12T04:58:20Z"
+    "userPermissions": []
   },
   "id": "Live Sales_Query3",
   "deleted": false,
