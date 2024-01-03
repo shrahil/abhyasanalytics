@@ -41,7 +41,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-09-12T04:58:20Z"
   },
   "id": "Hourly Sales_Query3",
   "deleted": false,

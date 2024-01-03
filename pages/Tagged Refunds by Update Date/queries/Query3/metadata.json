@@ -42,7 +42,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-09-04T08:58:43Z"
   },
   "id": "Tagged Refunds by Update Date_Query3",
   "deleted": false,

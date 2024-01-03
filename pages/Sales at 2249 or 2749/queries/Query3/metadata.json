@@ -42,7 +42,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-07-31T05:44:02Z"
   },
   "id": "Sales at 2249 or 2749_Query3",
   "deleted": false,

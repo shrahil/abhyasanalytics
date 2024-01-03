@@ -42,7 +42,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-08-08T06:18:12Z"
   },
   "id": "Tagged Sales_Query3",
   "deleted": false,
