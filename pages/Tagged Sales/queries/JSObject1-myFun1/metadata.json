@@ -37,7 +37,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-06-21T11:43:31Z"
   },
   "id": "Tagged Sales_JSObject1.myFun1",
   "deleted": false,

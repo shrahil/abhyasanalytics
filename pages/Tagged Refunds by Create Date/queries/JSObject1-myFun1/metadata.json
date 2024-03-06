@@ -37,7 +37,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-08-02T06:18:41Z"
   },
   "id": "Tagged Refunds by Create Date_JSObject1.myFun1",
   "deleted": false,

@@ -37,7 +37,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-07-28T07:41:42Z"
   },
   "id": "Sales at 2249 or 2749_JSObject1.myFun2",
   "deleted": false,
