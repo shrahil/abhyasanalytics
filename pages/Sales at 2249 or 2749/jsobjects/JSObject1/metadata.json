@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "6492e2637204916015a22d5b_64c371365dd3482b9ab5a56b",
+  "id": "Sales at 2249 or 2749_JSObject1",
   "unpublishedCollection": {
     "name": "JSObject1",
     "pageId": "Sales at 2249 or 2749",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "myVar1",
@@ -15,10 +15,6 @@
         "name": "myVar2",
         "value": "{}"
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "Sales at 2249 or 2749_JSObject1",
-  "deleted": false,
-  "gitSyncId": "6492e2637204916015a22d5b_64c371365dd3482b9ab5a56b"
+    ]
+  }
 }

@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "6492e2637204916015a22d5b_650aa0a688d2f214abb5215b",
+  "id": "Live Sales_JSObject1",
   "unpublishedCollection": {
     "name": "JSObject1",
     "pageId": "Live Sales",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "myVar1",
@@ -15,10 +15,6 @@
         "name": "myVar2",
         "value": "{}"
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "Live Sales_JSObject1",
-  "deleted": false,
-  "gitSyncId": "6492e2637204916015a22d5b_650aa0a688d2f214abb5215b"
+    ]
+  }
 }

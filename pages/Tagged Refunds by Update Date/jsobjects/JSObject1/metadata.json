@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "6492e2637204916015a22d5b_64c9f709d99b0a3330888d32",
+  "id": "Tagged Refunds by Update Date_JSObject1",
   "unpublishedCollection": {
     "name": "JSObject1",
     "pageId": "Tagged Refunds by Update Date",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "myVar1",
@@ -15,10 +15,6 @@
         "name": "myVar2",
         "value": "{}"
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "Tagged Refunds by Update Date_JSObject1",
-  "deleted": false,
-  "gitSyncId": "6492e2637204916015a22d5b_64c9f709d99b0a3330888d32"
+    ]
+  }
 }
