@@ -1,0 +1,6 @@
+UPDATE user_data SET
+name = {{inp_name.text}},
+email = {{inp_email.text}},
+dob = {{dat_dob.selectedDate}},
+country = {{mdl_sel_country.selectedOptionValue}}
+WHERE id = {{tbl_users.triggeredRow.id}}

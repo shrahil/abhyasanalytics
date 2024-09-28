@@ -1,0 +1,4 @@
+SELECT * FROM "CourseOffer" where "courseId" = 3125 and "id" = 222848
+
+
+

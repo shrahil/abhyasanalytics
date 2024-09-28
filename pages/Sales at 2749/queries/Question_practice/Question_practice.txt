@@ -1,0 +1,1 @@
+SELECT SUM("eventCount") AS "Questions_Practiced" FROM "DailyUserEvent" WHERE "userId" = 1593590 AND "event" = 'Question' AND "eventDate" < '2024-04-30';

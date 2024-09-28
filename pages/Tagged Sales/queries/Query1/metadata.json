@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM \"User\" ORDER BY id LIMIT 1;",
+      "body": "SELECT U.\"id\", U.\"startedAt\", U.\"expiryAt\", U.\"createdAt\", U.\"courseId\", U.\"trial\", UPA.\"ansCount\", UPA.\"testCount\", UP.\"firstName\", UP.\"lastName\", UP.\"city\", UP.\"email\", UP.\"phone\", UP.\"neetExamYear\", UP.\"state\", UP.\"boardExamYear\", C.\"name\" AS \"course_name\", CO.\"title\" AS \"extra_course\"\nFROM \"UserCourse\" AS U\nLEFT JOIN \"UserProfileAnalytic\" AS UPA ON U.\"userId\" = UPA.\"userId\"\nLEFT JOIN \"UserProfile\" AS UP ON U.\"userId\" = UP.\"userId\"\nLEFT JOIN \"Course\" AS C ON U.\"courseId\" = C.\"id\"\nLEFT JOIN \"CourseOffer\" AS CO ON U.\"courseId\" = CO.\"courseId\"\nWHERE U.\"createdAt\" BETWEEN '2024-04-01'AND '2024-05-16'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

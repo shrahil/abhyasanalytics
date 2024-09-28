@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 90,
+  "bottomRow": 180,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -34,7 +34,7 @@
     "date",
     "Revenue"
   ],
-  "columnUpdatedAt": 1695193426976,
+  "columnUpdatedAt": 1724647516990,
   "columnWidthMap": {
     "date": 212,
     "status": 75,
