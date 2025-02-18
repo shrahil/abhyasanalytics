@@ -1,10 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 102,
+  "bottomRow": 131,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -35,12 +36,13 @@
     "count",
     "productRevenue"
   ],
-  "columnUpdatedAt": 1680680955115,
+  "columnUpdatedAt": 1733812691074,
   "columnWidthMap": {
     "status": 75,
     "step": 62,
     "task": 245
   },
+  "defaultNewRow": "1499\n",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
@@ -49,9 +51,6 @@
   "delimiter": ",",
   "displayName": "Table",
   "dynamicBindingPathList": [
-    {
-      "key": "tableData"
-    },
     {
       "key": "accentColor"
     },
@@ -69,13 +68,12 @@
     },
     {
       "key": "primaryColumns.productRevenue.computedValue"
-    }
-  ],
-  "dynamicPropertyPathList": [
+    },
     {
       "key": "tableData"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "enableServerSideFiltering": false,

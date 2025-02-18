@@ -1,4 +1,4 @@
-SELECT * FROM "Payment" where "Payment"."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' and "Payment"."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' and "status" = 'responseReceivedSuccess' and "paymentForId" IN ('3125', '3257','3488', '3622', '3851') and "amount" = 2499
+SELECT * FROM "Payment" where "Payment"."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' and "Payment"."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' and "status" = 'responseReceivedSuccess' and "paymentForId" IN ('3125', '3257','3488', '3622', '3851','4181') and "amount" = 2499
 
 
 
