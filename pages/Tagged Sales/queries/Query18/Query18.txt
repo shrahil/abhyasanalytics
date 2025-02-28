@@ -1,0 +1,8 @@
+SELECT py."paymentForId", COUNT(*) AS count 
+FROM public."Payment" py 
+WHERE py."amount" = 1499 
+  AND py."status" = 'responseReceivedSuccess' 
+  AND py."createdAt" >= ({{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes') 
+  AND py."createdAt" <= ({{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes') 
+GROUP BY py."paymentForId";
+

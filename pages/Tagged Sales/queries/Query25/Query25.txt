@@ -1,0 +1,19 @@
+SELECT 
+    "paymentForId",
+    SUM("Payment"."amount") AS "productRevenue"
+FROM "Payment" 
+where "status" = 'responseReceivedSuccess' 
+AND "paymentForId" IN ('5435', '1739') 
+GROUP BY "Payment"."paymentForId" 
+
+UNION
+
+SELECT 
+    NULL, 
+    SUM("amount") 
+FROM "Payment" 
+WHERE "paymentForId" IN ('5435', '1739') 
+
+AND "status" = 'responseReceivedSuccess' 
+
+ORDER BY "productRevenue" DESC;

@@ -1,0 +1,8 @@
+SELECT "amount","userId"
+FROM public."Payment" 
+WHERE "amount" IN (4998, 4798) 
+  AND "status" = 'responseReceivedSuccess' 
+  AND "Payment"."createdAt" >= '2025-02-17'::date - interval '330 minutes' 
+  AND "Payment"."createdAt" <= '2025-02-24'::date + interval '1110 minutes'
+GROUP BY "amount","userId"
+order by "amount";

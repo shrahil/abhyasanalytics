@@ -1,0 +1,25 @@
+SELECT 
+    "Payment"."paymentForId", 
+    "Payment"."amount" as "amount", 
+    count(*) as count, 
+    "Payment"."amount" * count(*) as "productRevenue" 
+FROM "Payment" 
+WHERE "Payment"."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+  AND "Payment"."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+  AND "status" = 'responseReceivedSuccess' 
+  AND "paymentForId" = '4181' 
+GROUP BY "Payment"."paymentForId", "Payment"."amount"
+UNION all
+
+SELECT 
+    null as "paymentForId", 
+    null as "amount", 
+    count(*) as count, 
+    sum("amount") as "productRevenue" 
+FROM "Payment" 
+WHERE "paymentForId" = '4181' 
+  AND "createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+  AND "createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+  AND "status" = 'responseReceivedSuccess'
+
+ORDER BY "productRevenue" DESC;

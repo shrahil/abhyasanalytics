@@ -1,0 +1,31 @@
+WITH PaymentData AS (
+    SELECT 
+        py."amount" AS "amount", 
+        COUNT(*) AS "count", 
+        py."amount" * COUNT(*) AS "productRevenue",
+        COALESCE(up."state", py."userState") AS "userState"
+    FROM public."Payment" py
+    LEFT JOIN public."UserProfile" up ON up."userId" = py."userId"
+    WHERE py."createdAt" >= ({{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - INTERVAL '330 minutes') 
+      AND py."createdAt" <= ({{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + INTERVAL '1110 minutes') 
+      AND py."status" = 'responseReceivedSuccess'
+      AND py."paymentForId" IN ('3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181')
+    GROUP BY py."amount", COALESCE(up."state", py."userState")
+
+    UNION
+
+    SELECT 
+        NULL AS "amount", 
+        COUNT(*) AS "count", 
+        SUM(py."amount") AS "productRevenue",
+        NULL AS "userState"
+    FROM public."Payment" py
+    LEFT JOIN public."UserProfile" up ON up."userId" = py."userId"
+    WHERE py."createdAt" >= ({{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - INTERVAL '330 minutes') 
+      AND py."createdAt" <= ({{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + INTERVAL '1110 minutes') 
+      AND py."status" = 'responseReceivedSuccess'
+      AND py."paymentForId" IN ('3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181')
+)
+
+SELECT * FROM PaymentData 
+ORDER BY "productRevenue" DESC;

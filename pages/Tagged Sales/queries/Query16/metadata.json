@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6492e2637204916015a22d5b_d738ad62-8a6b-4e4d-a4e6-e0fdab3170a1",
-  "id": "Tagged Sales_Query8",
+  "gitSyncId": "6492e2637204916015a22d5b_dd16f9b6-5673-4c6c-8af4-0748c4a5bb07",
+  "id": "Tagged Sales_Query16",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT distinct \"name\",\"id\" FROM public.\"Course\" LIMIT 500;",
+      "body": "SELECT \"paymentForId\",count(*) FROM public.\"Payment\" where \"amount\"=1499 group by \"paymentForId\"  ;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -13,7 +13,7 @@
           "value": true
         }
       ],
-      "timeoutInMillisecond": 10000
+      "timeoutInMillisecond": 100000
     },
     "confirmBeforeExecute": false,
     "datasource": {
@@ -24,7 +24,7 @@
     },
     "dynamicBindingPathList": [],
     "executeOnLoad": false,
-    "name": "Query8",
+    "name": "Query16",
     "pageId": "Tagged Sales",
     "userSetOnLoad": false
   }

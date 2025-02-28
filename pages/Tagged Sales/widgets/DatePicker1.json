@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 9,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "LL",
@@ -50,12 +50,12 @@
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
-  "onDateSelected": "{{Query2.run(() => resetWidget(\"Table1\", true), () => {});\nQuery3.run()}}",
+  "onDateSelected": "{{Query2.run(() => resetWidget(\"Table1\", true), () => {});\nQuery3.run();\ncount_of_4998_4798.run()}}",
   "parentColumnSpace": 20.0625,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 46,
   "searchTags": [
     "calendar"
   ],

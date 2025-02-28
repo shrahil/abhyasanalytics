@@ -1,0 +1,11 @@
+SELECT 
+    p."userState",
+    COUNT(CASE WHEN p."paymentForId" IN ('3125', '3257', '3488', '3622', '3851', '4577', '4841', '4775', '4181') THEN 1 END) AS Direct_sales,
+    COUNT(CASE WHEN p."amount" IN (2249, 2749, 3749) 
+                  AND (p."paymentForId" NOT IN ('3125', '3257', '3488') OR p."paymentForId" IS NULL) THEN 1 END) AS Assisted_sales
+FROM "Payment" p
+WHERE p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - INTERVAL '330 minutes' 
+  AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + INTERVAL '1110 minutes'
+  AND p."status" = 'responseReceivedSuccess'
+GROUP BY p."userState"
+ORDER BY p."userState";

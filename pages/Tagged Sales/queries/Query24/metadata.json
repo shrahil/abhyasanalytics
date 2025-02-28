@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6492e2637204916015a22d5b_d738ad62-8a6b-4e4d-a4e6-e0fdab3170a1",
-  "id": "Tagged Sales_Query8",
+  "gitSyncId": "6492e2637204916015a22d5b_7435cba1-65c1-46ae-abdf-dc522e110d2a",
+  "id": "Tagged Sales_Query24",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT distinct \"name\",\"id\" FROM public.\"Course\" LIMIT 500;",
+      "body": "SELECT \n    \"amount\",\n    \"paymentForId\",\n    COUNT(\"paymentForId\") \nFROM \n    public.\"Payment\" \nWHERE \n    \"paymentForId\" = '4181' \n    AND (\"createdAt\" AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Kolkata') \n        BETWEEN '2025-02-15' AND '2025-02-25' and \n\t\t\t\t\"status\" = 'responseReceivedSuccess'\nGROUP BY \n    \"amount\", \n    \"paymentForId\";",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
-    "name": "Query8",
+    "executeOnLoad": true,
+    "name": "Query24",
     "pageId": "Tagged Sales",
     "userSetOnLoad": false
   }

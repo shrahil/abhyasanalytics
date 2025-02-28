@@ -1,1 +1,1 @@
-SELECT * FROM api."BookmarkedQuestionChapter" LIMIT 10;
+SELECT distinct "name","id" FROM public."Course" LIMIT 500;

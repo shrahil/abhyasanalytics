@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 131,
+  "bottomRow": 99,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -36,7 +36,7 @@
     "count",
     "productRevenue"
   ],
-  "columnUpdatedAt": 1733812691074,
+  "columnUpdatedAt": 1739947438783,
   "columnWidthMap": {
     "status": 75,
     "step": 62,
@@ -64,16 +64,20 @@
       "key": "primaryColumns.amount.computedValue"
     },
     {
+      "key": "tableData"
+    },
+    {
       "key": "primaryColumns.count.computedValue"
     },
     {
       "key": "primaryColumns.productRevenue.computedValue"
-    },
+    }
+  ],
+  "dynamicPropertyPathList": [
     {
       "key": "tableData"
     }
   ],
-  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "enableServerSideFiltering": false,
@@ -129,15 +133,18 @@
     "count": {
       "alias": "count",
       "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
       "computedValue": "{{Sales.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"count\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "count",
-      "index": 2,
+      "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -147,10 +154,12 @@
       "isSaveVisible": true,
       "isVisible": true,
       "label": "count",
+      "notation": "standard",
       "originalId": "count",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
@@ -158,9 +167,12 @@
     "productRevenue": {
       "alias": "productRevenue",
       "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
       "computedValue": "{{Sales.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productRevenue\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
@@ -176,10 +188,12 @@
       "isSaveVisible": true,
       "isVisible": true,
       "label": "productRevenue",
+      "notation": "standard",
       "originalId": "productRevenue",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
@@ -192,7 +206,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{Query2.data}}",
   "textSize": "0.875rem",
-  "topRow": 19,
+  "topRow": 18,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 1,

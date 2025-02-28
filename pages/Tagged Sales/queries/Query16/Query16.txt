@@ -1,0 +1,1 @@
+SELECT "paymentForId",count(*) FROM public."Payment" where "amount"=1499 group by "paymentForId"  ;
