@@ -1,0 +1,14 @@
+SELECT 
+    "courseOfferId",
+    COUNT(*) AS total_payments
+FROM 
+    public."Payment" 
+WHERE 
+    "paymentForId" = 3125 
+    AND "status" = 'responseReceivedSuccess'
+    AND ("createdAt" AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Kolkata') >= '2025-02-01 00:00:00' 
+    AND ("createdAt" AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Kolkata') <= '2025-02-28 23:59:59'
+GROUP BY 
+    "courseOfferId"
+ORDER BY 
+    total_payments DESC;

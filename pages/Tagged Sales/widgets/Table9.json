@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 66,
+  "bottomRow": 631,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -31,20 +31,23 @@
     }
   },
   "columnOrder": [
-    "amount",
-    "count",
-    "productRevenue"
+    "id",
+    "name"
   ],
-  "columnUpdatedAt": 1691475533542,
+  "columnUpdatedAt": 1741005438433,
   "columnWidthMap": {},
+  "customIsLoading": false,
+  "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
     0
   ],
   "delimiter": ",",
-  "displayName": "Table",
   "dynamicBindingPathList": [
+    {
+      "key": "tableData"
+    },
     {
       "key": "accentColor"
     },
@@ -55,59 +58,55 @@
       "key": "boxShadow"
     },
     {
-      "key": "tableData"
+      "key": "primaryColumns.id.computedValue"
     },
     {
-      "key": "primaryColumns.amount.computedValue"
-    },
-    {
-      "key": "primaryColumns.count.computedValue"
-    },
-    {
-      "key": "primaryColumns.productRevenue.computedValue"
+      "key": "primaryColumns.name.computedValue"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
-  "enableServerSideFiltering": false,
-  "hideCard": false,
+  "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
-  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.e6911f8bb94dc6c4a102a74740c41763.svg",
   "inlineEditingSaveOption": "ROW_LEVEL",
-  "isDeprecated": false,
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": true,
+  "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
-  "key": "3lws2yxkfg",
+  "key": "7prsc525m9",
   "label": "Data",
-  "leftColumn": 43,
+  "leftColumn": 0,
   "minWidth": 450,
-  "mobileBottomRow": 44,
-  "mobileLeftColumn": 28,
-  "mobileRightColumn": 62,
-  "mobileTopRow": 16,
-  "needsHeightForContent": true,
-  "originalBottomRow": 50,
-  "originalTopRow": 16,
-  "parentColumnSpace": 19.8125,
+  "mobileBottomRow": 631,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 603,
+  "needsErrorInfo": false,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "amount": {
-      "alias": "amount",
+    "id": {
+      "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"amount\"]))}}",
+      "computedValue": "{{Table9.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "amount",
+      "id": "id",
       "index": 0,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -117,24 +116,31 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "amount",
-      "originalId": "amount",
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "count": {
-      "alias": "count",
+    "name": {
+      "alias": "name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "columnType": "number",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"count\"]))}}",
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table9.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "count",
+      "id": "name",
       "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -144,37 +150,13 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "count",
-      "originalId": "count",
+      "label": "name",
+      "notation": "standard",
+      "originalId": "name",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "productRevenue": {
-      "alias": "productRevenue",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "number",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"productRevenue\"]))}}",
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "productRevenue",
-      "index": 2,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "productRevenue",
-      "originalId": "productRevenue",
-      "sticky": "",
-      "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
@@ -182,19 +164,15 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 34,
   "searchKey": "",
-  "tableData": "{{Query3.data}}",
-  "tags": [
-    "Suggested",
-    "Display"
-  ],
+  "tableData": "{{Query29.data}}",
   "textSize": "0.875rem",
-  "topRow": 25,
+  "topRow": 603,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "c1e74yvzu2",
-  "widgetName": "Table1"
+  "widgetId": "lx68vfxq3s",
+  "widgetName": "Table9"
 }

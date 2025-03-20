@@ -1,0 +1,4 @@
+SELECT "paymentForId", "courseOfferId", count(*)
+FROM public."Payment"
+WHERE "amount" = 2499
+group by "courseOfferId","paymentForId";

@@ -1,0 +1,8 @@
+SELECT  "courseOfferId", count(*)
+FROM public."Payment"
+WHERE "amount" = 5499
+  AND "createdAt" AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Kolkata'
+      BETWEEN '2025-03-09 00:00:00' AND '2025-03-12 23:59:59'
+			AND "status" = 'responseReceivedSuccess'
+		and "paymentForId"=3125
+		group by "courseOfferId";

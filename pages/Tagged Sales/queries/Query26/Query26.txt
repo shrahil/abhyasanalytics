@@ -1,0 +1,25 @@
+WITH PaymentData AS (
+    /* Filter payments based on date range, status, and specific paymentForId */
+    SELECT 
+        "id", 
+        "amount", 
+        "paymentForId", 
+        "userEmail", 
+        "createdAt" 
+    FROM 
+        "Payment" 
+    WHERE 
+        "createdAt" >= {{moment(DatePicker1.selectedDate).format('YYYY-MM-DD')}}::date - INTERVAL '330 minutes'
+        AND "createdAt" <= {{moment(DatePicker2.selectedDate).format('YYYY-MM-DD')}}::date + INTERVAL '1110 minutes'
+        AND "status" = 'responseReceivedSuccess'
+        AND "paymentForId" IN ('4841', '4775', '4247', '3851', '3653', '3125')
+),
+MatchedPayments AS (
+    /* Match payments with CourseInvitation based on email and amount */
+    SELECT 
+        p."id", 
+        p."amount", 
+        p."userEmail",
+        COALESCE(p."paymentForId", ci."courseId") AS "resolvedPaymentForId"
+    FROM 
+        PaymentData p
