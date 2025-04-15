@@ -1,3 +1,24 @@
-SELECT "Payment"."amount" as "amount", count(*) as count, "amount" * count(*) as  "productRevenue" FROM "Payment" where "Payment"."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' and "Payment"."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' and "status" = 'responseReceivedSuccess' and "paymentForId" IN ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569')  group by "Payment"."amount"
-union
-SELECT null, count(*), sum("amount") FROM "Payment" where  "paymentForId" IN ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569') and "createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' and "createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' and "status" = 'responseReceivedSuccess' ORDER BY "productRevenue" desc;
+SELECT p."amount" as "amount", 
+       count(p.*) as count,
+       c."title", 
+       p."amount" * count(*) as "productRevenue"
+FROM "Payment" p
+JOIN "CourseOffer" c ON c."id" = p."courseOfferId"
+WHERE p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+  AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+  AND p."status" = 'responseReceivedSuccess' 
+  AND p."paymentForId" IN ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569')  
+GROUP BY p."amount", c."title"
+
+UNION
+
+SELECT null as "amount", 
+       count(*) as count, 
+       null as "title", 
+       sum("amount") as "productRevenue"
+FROM "Payment"
+WHERE "paymentForId" IN ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569') 
+  AND "createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+  AND "createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+  AND "status" = 'responseReceivedSuccess'
+ORDER BY "productRevenue" DESC;

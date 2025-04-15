@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "Query17",
     "pageId": "Tagged Sales",
     "userSetOnLoad": false
