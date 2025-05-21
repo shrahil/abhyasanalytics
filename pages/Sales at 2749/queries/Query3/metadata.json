@@ -21,9 +21,9 @@
       "name": "learner",
       "pluginId": "postgres-plugin"
     },
-    "executeOnLoad": false,
     "name": "Query3",
     "pageId": "Sales at 2749",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

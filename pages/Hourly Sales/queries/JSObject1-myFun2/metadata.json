@@ -24,10 +24,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "JSObject1.myFun2",
     "name": "myFun2",
     "pageId": "Hourly Sales",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

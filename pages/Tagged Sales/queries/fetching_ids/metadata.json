@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
     "name": "fetching_ids",
     "pageId": "Tagged Sales",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

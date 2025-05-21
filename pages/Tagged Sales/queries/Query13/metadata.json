@@ -22,9 +22,9 @@
       "name": "learner1",
       "pluginId": "postgres-plugin"
     },
-    "executeOnLoad": false,
     "name": "Query13",
     "pageId": "Tagged Sales",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
