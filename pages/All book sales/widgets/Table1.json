@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 86,
+  "bottomRow": 69,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -71,7 +71,11 @@
       "key": "primaryColumns.productRevenue.computedValue"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "enableServerSideFiltering": false,
@@ -89,7 +93,7 @@
   "isVisibleSearch": true,
   "key": "3lws2yxkfg",
   "label": "Data",
-  "leftColumn": 37,
+  "leftColumn": 28,
   "minWidth": 450,
   "mobileBottomRow": 44,
   "mobileLeftColumn": 28,
@@ -241,9 +245,9 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 55,
   "searchKey": "",
-  "tableData": "{{Pure_Digital.data}}",
+  "tableData": "{{Pure_Books_New.data}}",
   "tags": [
     "Suggested",
     "Display"

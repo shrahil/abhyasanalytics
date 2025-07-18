@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 100,
+  "bottomRow": 71,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -39,6 +39,9 @@
   ],
   "columnUpdatedAt": 1752818883919,
   "columnWidthMap": {
+    "amount": 91,
+    "count": 85,
+    "productRevenue": 149,
     "status": 75,
     "step": 62,
     "task": 245
@@ -238,11 +241,11 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 36,
+  "rightColumn": 27,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{Pure_Digital.data}}",
+  "tableData": "{{Pure_Digital_New.data}}",
   "textSize": "0.875rem",
   "topRow": 20,
   "totalRecordsCount": 0,

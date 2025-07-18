@@ -50,7 +50,7 @@
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
-  "onDateSelected": "{{Query2.run(() => resetWidget(\"Table1\", true), () => {});\nPure_Digital.run();\ncount_of_4998_4798.run()}}",
+  "onDateSelected": "{{Query2.run(() => resetWidget(\"Table1\", true), () => {});\nPure_Digital_New.run();\ncount_of_4998_4798.run()}}",
   "parentColumnSpace": 20.0625,
   "parentId": "0",
   "parentRowSpace": 10,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 76,
+  "bottomRow": 109,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -25,7 +25,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "4te2gycj25",
-  "leftColumn": 0,
+  "leftColumn": 31,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -41,7 +41,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13,
+  "rightColumn": 44,
   "searchTags": [
     "typography",
     "paragraph",
@@ -52,13 +52,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "Pure Digital Renewals ",
+  "text": "Hybrid Renewals",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 72,
+  "topRow": 105,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "x4mhl7c5po",
-  "widgetName": "Text1Copy1"
+  "widgetId": "v3kvqpaswt",
+  "widgetName": "Text1Copy1CopyCopy"
 }

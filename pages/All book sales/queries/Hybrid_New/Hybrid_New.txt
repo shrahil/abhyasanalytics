@@ -2,34 +2,39 @@ SELECT
     p."amount" AS "amount", 
     COUNT(p.id) AS "count", 
     c."title", 
+		p."addonCourseIds",
     p."amount" * COUNT(p.id) AS "productRevenue"
 FROM "Payment" p
 JOIN "CourseOffer" c ON c."id" = p."courseOfferId"
-WHERE 
-    p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+WHERE p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
     AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
     AND p."status" = 'responseReceivedSuccess' 
-    AND p."paymentForId" = '3125'
-    AND c."parentCourseOfferId" = 12846701
-		AND p."addonCourseIds" IS NULL
+    AND p."paymentForId" = '3125' 
+    AND p."courseOfferId" IN (1265408, 12663356)
+    AND (
+        p."addonCourseIds" = '{4181}' OR
+        p."addonCourseIds" = '{4181,6293}' OR  
+        p."addonCourseIds" = '{6293}'
+    )
 GROUP BY 
-    p."amount", c."title"
+    p."amount", c."title", p."addonCourseIds"
 UNION
 SELECT 
     NULL AS "amount", 
     COUNT(*) AS "count", 
+		NULL AS "addonCourseIds",
     NULL AS "title", 
     SUM(p."amount") AS "productRevenue"
 FROM "Payment" p
-JOIN "CourseOffer" c ON c."id" = p."courseOfferId"
-WHERE 
-    p."paymentForId" = '3125'
-    AND c."parentCourseOfferId" = 12846701
+WHERE p."paymentForId" = '3125' 
+    AND p."courseOfferId" IN (1265408, 12663356)
+    AND (
+        p."addonCourseIds" = '{4181}' OR
+        p."addonCourseIds" = '{4181,6293}' OR  
+        p."addonCourseIds" = '{6293}'
+    )
     AND p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
     AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
     AND p."status" = 'responseReceivedSuccess'
-		AND p."addonCourseIds" IS NULL
-GROUP BY 
-    c."parentCourseOfferId"
 ORDER BY 
     "productRevenue" DESC;

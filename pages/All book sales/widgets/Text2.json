@@ -25,7 +25,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "4te2gycj25",
-  "leftColumn": 37,
+  "leftColumn": 27,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -41,7 +41,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 53,
+  "rightColumn": 43,
   "searchTags": [
     "typography",
     "paragraph",
@@ -52,7 +52,7 @@
     "Suggested",
     "Content"
   ],
-  "text": "Pure Books New",
+  "text": "Pure Books",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 16,

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    p.\"id\",\n\t\tp.\"amount\",\n\t\tp.\"courseOfferId\",\n\t\tp.\"paymentForId\",\n    c.\"parentCourseOfferId\"\nFROM \"Payment\" p\nJOIN \"CourseOffer\" c ON c.\"id\" = p.\"courseOfferId\"\nWHERE p.\"paymentForId\" = 3125 \n    AND p.\"courseOfferId\" IS NOT NULL\n\t\tAND c.\"parentCourseOfferId\" = 12846701\n;",
+      "body": "SELECT \n    p.\"id\",\n\t\tp.\"amount\",\n\t\tp.\"courseOfferId\",\n\t\tp.\"paymentForId\",\n    c.\"parentCourseOfferId\"\nFROM \"Payment\" p\nJOIN \"CourseOffer\" c ON c.\"id\" = p.\"courseOfferId\"\nWHERE p.\"paymentForId\" = 3125 \n    AND p.\"courseOfferId\" IS NOT NULL\n\t\tAND c.\"parentCourseOfferId\" = 12846701\n\t\tAND p.\"status\" = 'responseReceivedSuccess'\n;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -55,7 +55,7 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 19,
   "mobileTopRow": 4,
-  "onDateSelected": "{{Pure_Digital.run();\nQuery2.run()}}",
+  "onDateSelected": "{{Pure_Digital_New.run();\nQuery2.run()}}",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,

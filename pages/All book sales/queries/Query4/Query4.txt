@@ -9,4 +9,5 @@ JOIN "CourseOffer" c ON c."id" = p."courseOfferId"
 WHERE p."paymentForId" = 3125 
     AND p."courseOfferId" IS NOT NULL
 		AND c."parentCourseOfferId" = 12846701
+		AND p."status" = 'responseReceivedSuccess'
 ;

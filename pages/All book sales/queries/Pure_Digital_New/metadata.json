@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6492e2637204916015a22d5b_1033e6dd-127c-49db-b01e-cb8822a9a34d",
-  "id": "All book sales_Pure_Digital",
+  "id": "All book sales_Pure_Digital_New",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Pure_Digital",
+    "name": "Pure_Digital_New",
     "pageId": "All book sales",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
