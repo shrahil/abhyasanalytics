@@ -1,3 +1,0 @@
-SELECT p."paymentForId",c."name" FROM public."Course" c
-join public."Payment" p on p."id"=c."id"
-where p."paymentForId" in ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569');

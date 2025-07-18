@@ -32,9 +32,10 @@
   },
   "columnOrder": [
     "paymentForId",
-    "productRevenue"
+    "productRevenue",
+    "month"
   ],
-  "columnUpdatedAt": 1740559822079,
+  "columnUpdatedAt": 1751529745928,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -62,6 +63,9 @@
     },
     {
       "key": "primaryColumns.productRevenue.computedValue"
+    },
+    {
+      "key": "primaryColumns.month.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -93,6 +97,40 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "month": {
+      "alias": "month",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Sales_for_HYTS.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"month\"])) : month })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "month",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "month",
+      "notation": "standard",
+      "originalId": "month",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "paymentForId": {
       "alias": "paymentForId",
       "allowCellWrapping": false,

@@ -1,5 +1,0 @@
-SELECT "courseOfferId", "amount", "paymentForId"
-FROM public."Payment"
-WHERE "paymentForId" IN ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569')
-  AND "amount" IN (499, 749, 999)
-  AND "status" = 'responseReceivedSuccess';

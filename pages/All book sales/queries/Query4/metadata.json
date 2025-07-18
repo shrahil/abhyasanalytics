@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6492e2637204916015a22d5b_50f937fd-7a7c-41ca-b828-cd3165edbec7",
-  "id": "Tagged Sales_Query26",
+  "gitSyncId": "6492e2637204916015a22d5b_3780baf2-ba8f-4ae3-a0d4-09acf4f76331",
+  "id": "All book sales_Query4",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \"id\",\"title\" FROM public.\"CourseOffer\" where \"courseId\" in ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569') limit 100;",
+      "body": "SELECT \n    p.\"id\",\n\t\tp.\"amount\",\n\t\tp.\"courseOfferId\",\n\t\tp.\"paymentForId\",\n    c.\"parentCourseOfferId\"\nFROM \"Payment\" p\nJOIN \"CourseOffer\" c ON c.\"id\" = p.\"courseOfferId\"\nWHERE p.\"paymentForId\" = 3125 \n    AND p.\"courseOfferId\" IS NOT NULL\n\t\tAND c.\"parentCourseOfferId\" = 12846701\n;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -13,7 +13,7 @@
           "value": true
         }
       ],
-      "timeoutInMillisecond": 100000
+      "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
     "datasource": {
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query26",
-    "pageId": "Tagged Sales",
+    "name": "Query4",
+    "pageId": "All book sales",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

@@ -1,0 +1,1 @@
+SELECT * FROM "CourseOffer" where "courseId" = 3125 AND "discountedFee" = 3999 LIMIT 10;

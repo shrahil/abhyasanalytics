@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    \"paymentForId\",\n    SUM(\"Payment\".\"amount\") AS \"productRevenue\"\nFROM \"Payment\" \nwhere \"status\" = 'responseReceivedSuccess' \nAND \"paymentForId\" IN ('5435', '1739') \nGROUP BY \"Payment\".\"paymentForId\" \n\nUNION\n\nSELECT \n    NULL, \n    SUM(\"amount\") \nFROM \"Payment\" \nWHERE \"paymentForId\" IN ('5435', '1739') \n\nAND \"status\" = 'responseReceivedSuccess' \n\nORDER BY \"productRevenue\" DESC;\n",
+      "body": "SELECT \n    DATE_TRUNC('month', p.\"createdAt\") AS \"month\",\n    p.\"paymentForId\",\n    SUM(p.\"amount\") AS \"productRevenue\"\nFROM \n    \"Payment\" p\nJOIN \n    \"CourseOffer\" c ON c.\"id\" = p.\"courseOfferId\" -- Assuming this is the correct join condition\nWHERE \n    p.\"status\" = 'responseReceivedSuccess'\n    AND p.\"paymentForId\" IN ('5435', '1739', '4181', '5435')\n    AND p.\"createdAt\" >= '2024-02-01' -- Starting from April 2024\n    AND p.\"createdAt\" < '2025-04-01' -- Up to March 2025\nGROUP BY \n    DATE_TRUNC('month', p.\"createdAt\"),\n    p.\"paymentForId\",\n    c.\"discountedFee\" -- Include it in the GROUP BY clause since it's part of the SELECT\nORDER BY \n    \"month\", p.\"paymentForId\";\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

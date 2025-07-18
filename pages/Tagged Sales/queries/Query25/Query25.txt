@@ -1,19 +1,19 @@
 SELECT 
-    "paymentForId",
-    SUM("Payment"."amount") AS "productRevenue"
-FROM "Payment" 
-where "status" = 'responseReceivedSuccess' 
-AND "paymentForId" IN ('5435', '1739') 
-GROUP BY "Payment"."paymentForId" 
-
-UNION
-
-SELECT 
-    NULL, 
-    SUM("amount") 
-FROM "Payment" 
-WHERE "paymentForId" IN ('5435', '1739') 
-
-AND "status" = 'responseReceivedSuccess' 
-
-ORDER BY "productRevenue" DESC;
+    DATE_TRUNC('month', p."createdAt") AS "month",
+    p."paymentForId",
+    SUM(p."amount") AS "productRevenue"
+FROM 
+    "Payment" p
+JOIN 
+    "CourseOffer" c ON c."id" = p."courseOfferId" -- Assuming this is the correct join condition
+WHERE 
+    p."status" = 'responseReceivedSuccess'
+    AND p."paymentForId" IN ('5435', '1739', '4181', '5435')
+    AND p."createdAt" >= '2024-02-01' -- Starting from April 2024
+    AND p."createdAt" < '2025-04-01' -- Up to March 2025
+GROUP BY 
+    DATE_TRUNC('month', p."createdAt"),
+    p."paymentForId",
+    c."discountedFee" -- Include it in the GROUP BY clause since it's part of the SELECT
+ORDER BY 
+    "month", p."paymentForId";

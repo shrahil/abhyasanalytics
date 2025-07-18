@@ -39,6 +39,10 @@
     {
       "id": "Live Sales",
       "isDefault": false
+    },
+    {
+      "id": "All book sales",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

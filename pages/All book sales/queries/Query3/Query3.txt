@@ -1,0 +1,7 @@
+SELECT * FROM "Payment" 
+WHERE "paymentForId" = '3125' 
+AND (
+    "addonCourseIds" = '{4181}' OR
+    "addonCourseIds" = '{4181,6293}' OR  
+    "addonCourseIds" = '{6293}'
+);

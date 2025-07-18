@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6492e2637204916015a22d5b_f2201cc5-80cf-465b-9073-f9d2cc2cdfa6",
+  "id": "All book sales_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "All book sales",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

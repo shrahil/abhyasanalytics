@@ -1,12 +1,13 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 334,
+  "bottomRow": 100,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "canFreezeColumn": true,
+  "canFreezeColumn": false,
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -31,24 +32,26 @@
     }
   },
   "columnOrder": [
-    "paymentForId",
+    "amount",
+    "count",
     "productRevenue",
-    "month"
+    "title"
   ],
-  "columnUpdatedAt": 1751529745925,
-  "columnWidthMap": {},
-  "customIsLoading": false,
-  "customIsLoadingValue": "",
+  "columnUpdatedAt": 1752818883919,
+  "columnWidthMap": {
+    "status": 75,
+    "step": 62,
+    "task": 245
+  },
+  "defaultNewRow": "1499\n",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
     0
   ],
   "delimiter": ",",
+  "displayName": "Table",
   "dynamicBindingPathList": [
-    {
-      "key": "tableData"
-    },
     {
       "key": "accentColor"
     },
@@ -59,13 +62,19 @@
       "key": "boxShadow"
     },
     {
-      "key": "primaryColumns.paymentForId.computedValue"
+      "key": "primaryColumns.amount.computedValue"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.count.computedValue"
     },
     {
       "key": "primaryColumns.productRevenue.computedValue"
     },
     {
-      "key": "primaryColumns.month.computedValue"
+      "key": "primaryColumns.title.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -75,43 +84,39 @@
   ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
-  "flexVerticalAlignment": "start",
+  "enableServerSideFiltering": false,
+  "hideCard": false,
   "horizontalAlignment": "LEFT",
+  "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
   "inlineEditingSaveOption": "ROW_LEVEL",
+  "isDeprecated": false,
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
-  "key": "0v5v85jdln",
+  "key": "9thsfe430j",
   "label": "Data",
-  "leftColumn": 34,
-  "minWidth": 450,
-  "mobileBottomRow": 544,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 34,
-  "mobileTopRow": 516,
-  "needsErrorInfo": false,
+  "leftColumn": 0,
+  "originalBottomRow": 49,
+  "originalTopRow": 15,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "month": {
-      "alias": "month",
+    "amount": {
+      "alias": "amount",
       "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = abyas_book_revenue.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"month\"])) : month })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Sales.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"amount\"])) :  currentRow[\"amount\"] })()}}",
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "month",
-      "index": 2,
+      "id": "amount",
+      "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -120,32 +125,30 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "month",
-      "notation": "standard",
-      "originalId": "month",
+      "label": "amount",
+      "originalId": "amount",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
-      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "paymentForId": {
-      "alias": "paymentForId",
+    "count": {
+      "alias": "count",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = abyas_book_revenue.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"paymentForId\"])) :  currentRow[\"paymentForId\"] })()}}",
+      "computedValue": "{{(() => { const tableData = Sales.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"count\"])) :  currentRow[\"count\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "paymentForId",
-      "index": 0,
+      "id": "count",
+      "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -154,9 +157,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "paymentForId",
+      "label": "count",
       "notation": "standard",
-      "originalId": "paymentForId",
+      "originalId": "count",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -171,7 +174,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = abyas_book_revenue.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"productRevenue\"])) :  currentRow[\"productRevenue\"] })()}}",
+      "computedValue": "{{(() => { const tableData = Sales.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"productRevenue\"])) :  currentRow[\"productRevenue\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -179,7 +182,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "productRevenue",
-      "index": 1,
+      "index": 2,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -198,19 +201,54 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
+    },
+    "title": {
+      "alias": "title",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Sales.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"title\"])) :  currentRow[\"title\"] })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "title",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "title",
+      "notation": "standard",
+      "originalId": "title",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
-  "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 36,
   "searchKey": "",
-  "tableData": "{{Query25.data}}",
+  "serverSidePaginationEnabled": false,
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{Pure_Digital.data}}",
   "textSize": "0.875rem",
-  "topRow": 306,
+  "topRow": 20,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
-  "version": 2,
+  "version": 1,
   "verticalAlignment": "CENTER",
-  "widgetId": "8tsf6oupqa",
-  "widgetName": "abyas_book_revenue"
+  "widgetId": "48dptw1y7w",
+  "widgetName": "Sales"
 }

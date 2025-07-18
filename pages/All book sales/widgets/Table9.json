@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 206,
+  "bottomRow": 631,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -31,10 +31,10 @@
     }
   },
   "columnOrder": [
-    "amount",
-    "userId"
+    "id",
+    "name"
   ],
-  "columnUpdatedAt": 1740388123623,
+  "columnUpdatedAt": 1741005438433,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -58,10 +58,10 @@
       "key": "boxShadow"
     },
     {
-      "key": "primaryColumns.amount.computedValue"
+      "key": "primaryColumns.id.computedValue"
     },
     {
-      "key": "primaryColumns.userId.computedValue"
+      "key": "primaryColumns.name.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -81,32 +81,34 @@
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
-  "key": "d777qti43f",
+  "key": "7prsc525m9",
   "label": "Data",
-  "leftColumn": 28,
+  "leftColumn": 0,
   "minWidth": 450,
-  "mobileBottomRow": 370,
+  "mobileBottomRow": 631,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 34,
-  "mobileTopRow": 342,
+  "mobileTopRow": 603,
   "needsErrorInfo": false,
+  "originalBottomRow": 632,
+  "originalTopRow": 604,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "amount": {
-      "alias": "amount",
+    "id": {
+      "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = response_sucess.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"amount\"])) :  currentRow[\"amount\"] })()}}",
+      "computedValue": "{{(() => { const tableData = Table9.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"id\"])) :  currentRow[\"id\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "amount",
+      "id": "id",
       "index": 0,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -116,9 +118,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "amount",
+      "label": "id",
       "notation": "standard",
-      "originalId": "amount",
+      "originalId": "id",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -127,18 +129,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "userId": {
-      "alias": "userId",
+    "name": {
+      "alias": "name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = response_sucess.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"userId\"])) :  currentRow[\"userId\"] })()}}",
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table9.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"name\"])) :  currentRow[\"name\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "userId",
+      "id": "name",
       "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -148,10 +152,11 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "userId",
+      "label": "name",
       "notation": "standard",
-      "originalId": "userId",
+      "originalId": "name",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -161,15 +166,15 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 34,
   "searchKey": "",
-  "tableData": "{{count_of_4998_4798.data}}",
+  "tableData": "{{Query29.data}}",
   "textSize": "0.875rem",
-  "topRow": 178,
+  "topRow": 603,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "yiyi37fhfx",
-  "widgetName": "response_sucess"
+  "widgetId": "lx68vfxq3s",
+  "widgetName": "Table9"
 }

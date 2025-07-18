@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6492e2637204916015a22d5b_6492e2637204916015a22d5f",
+  "gitSyncId": "6492e2637204916015a22d5b_bc4bffc6-5c0c-46b6-b7bb-dc9a80b5b037",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
@@ -27,7 +27,7 @@
         }
       }
     ],
-    "name": "Tagged Sales",
-    "slug": "tagged-sales"
+    "name": "All book sales",
+    "slug": "all-book-sales"
   }
 }

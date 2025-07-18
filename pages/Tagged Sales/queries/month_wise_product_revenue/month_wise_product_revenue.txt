@@ -1,0 +1,21 @@
+SELECT
+    DATE_TRUNC('month', p."createdAt") AS "month",
+    p."amount" AS "amount",
+    count(p.*) AS count,
+    c."title", 
+    p."amount" * count(*) AS "productRevenue"
+FROM
+    "Payment" p
+JOIN 
+    "CourseOffer" c ON c."id" = p."courseOfferId"
+WHERE
+    p."createdAt" >= '2024-02-01' -- Starting from May 2024
+    AND p."createdAt" <= CURRENT_DATE -- Up to the current date
+   
+    AND p."paymentForId" IN ('5569','5435','4181','3818','1739')
+GROUP BY 
+    DATE_TRUNC('month', p."createdAt"),
+    p."amount", 
+    c."title"
+ORDER BY 
+    "month";

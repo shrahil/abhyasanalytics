@@ -1,0 +1,44 @@
+SELECT 
+    p."amount" AS "amount", 
+    COUNT(p.id) AS "count", 
+    c."title", 
+    p."amount" * COUNT(p.id) AS "productRevenue"
+FROM 
+    "Payment" p
+JOIN 
+    "CourseOffer" c 
+    ON c."id" = p."courseOfferId"
+WHERE 
+    p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+    AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+    AND p."status" = 'responseReceivedSuccess' 
+    AND p."paymentForId" = '3125'
+    AND (
+        p."addonCourseIds" = '{4181}' OR
+        p."addonCourseIds" = '{4181,6293}' OR  
+        p."addonCourseIds" = '{6293}'
+    )
+GROUP BY 
+    p."amount", c."title"
+UNION
+SELECT 
+    NULL AS "amount", 
+    COUNT(*) AS "count", 
+    NULL AS "title", 
+    SUM(p."amount") AS "productRevenue"
+FROM 
+    "Payment" p
+WHERE 
+    p."paymentForId" = '3125'
+    AND (
+        p."addonCourseIds" = '{4181}' OR
+        p."addonCourseIds" = '{4181,6293}' OR  
+        p."addonCourseIds" = '{6293}'
+    )
+    AND p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+    AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+    AND p."status" = 'responseReceivedSuccess'
+GROUP BY 
+    p."addonCourseIds"
+ORDER BY 
+    "productRevenue" DESC;

@@ -1,4 +1,0 @@
-SELECT "neetExamYear", COUNT(*) 
-FROM public."UserProfile" 
-WHERE "neetExamYear" IN (2025, 2026, 2027, 2028) 
-GROUP BY "neetExamYear";

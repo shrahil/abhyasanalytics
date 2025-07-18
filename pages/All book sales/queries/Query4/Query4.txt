@@ -1,0 +1,12 @@
+SELECT 
+    p."id",
+		p."amount",
+		p."courseOfferId",
+		p."paymentForId",
+    c."parentCourseOfferId"
+FROM "Payment" p
+JOIN "CourseOffer" c ON c."id" = p."courseOfferId"
+WHERE p."paymentForId" = 3125 
+    AND p."courseOfferId" IS NOT NULL
+		AND c."parentCourseOfferId" = 12846701
+;

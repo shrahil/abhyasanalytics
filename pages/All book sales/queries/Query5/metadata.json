@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6492e2637204916015a22d5b_50f937fd-7a7c-41ca-b828-cd3165edbec7",
-  "id": "Tagged Sales_Query26",
+  "gitSyncId": "6492e2637204916015a22d5b_0ed3149b-fa68-4e00-9b02-5e54673ef2b5",
+  "id": "All book sales_Query5",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \"id\",\"title\" FROM public.\"CourseOffer\" where \"courseId\" in ('4247','3125', '3257','3488', '3622', '3851','4577','4841','4775', '4181','5569') limit 100;",
+      "body": "SELECT * FROM \"CourseOffer\" where \"courseId\" = 3125 AND \"discountedFee\" = 3999 LIMIT 10;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -13,7 +13,7 @@
           "value": true
         }
       ],
-      "timeoutInMillisecond": 100000
+      "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
     "datasource": {
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query26",
-    "pageId": "Tagged Sales",
+    "name": "Query5",
+    "pageId": "All book sales",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
