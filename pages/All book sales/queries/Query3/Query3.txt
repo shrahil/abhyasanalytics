@@ -2,18 +2,16 @@ SELECT
     p."id", 
     p."amount", 
     p."paymentForId", 
-    p."courseOfferId", 
-    p."addonCourseIds",
-    c."title"
+    p."courseOfferId",
+    c."title",
+		c."parentCourseOfferId",
+		p."shipmentId"
 FROM "Payment" p
 JOIN "CourseOffer" c ON c."id" = p."courseOfferId"
 WHERE p."paymentForId" = '3125' 
-    AND p."courseOfferId" IN (1265408, 12663356)
-    AND (
-        p."addonCourseIds" = '{4181}' OR
-        p."addonCourseIds" = '{4181,6293}' OR  
-        p."addonCourseIds" = '{6293}'
-    )
+    AND p."shipmentId" IS NOT NULL
 		AND p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
     AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
-    AND p."status" = 'responseReceivedSuccess';
+    AND p."status" = 'responseReceivedSuccess'
+		AND c."parentCourseOfferId" = 12846697
+		AND p."addonCourseIds" IS NULL LIMIT 100;

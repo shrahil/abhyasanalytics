@@ -1,5 +1,5 @@
 SELECT 
-    p."amount" AS "amount",p."addonCourseIds", 
+    p."amount" AS "amount", 
     COUNT(p.id) AS "count", 
     c."title", 
     p."amount" * COUNT(p.id) AS "productRevenue",
@@ -36,7 +36,7 @@ GROUP BY
 UNION ALL
 
 SELECT 
-    NULL AS "amount",NULL as "addonCourseIds",
+    NULL AS "amount", 
     COUNT(TotalCalculation."id") AS "count", 
     'Total' AS "title", 
     SUM("productRevenue") AS "productRevenue",  -- Sum product revenue
@@ -55,7 +55,7 @@ FROM (
             WHEN p."addonCourseIds" = '{4181}' THEN (p."amount" - 1499) * COUNT(p.id)
             WHEN p."addonCourseIds" = '{4181,6293}' THEN (p."amount" - 2499) * COUNT(p.id)   
             WHEN p."addonCourseIds" = '{6293}' THEN (p."amount" - 1499) * COUNT(p.id)   
-            ELSE 0
+            ELSE p."amount"*count(p."id")
         END AS "digital_revenue_abhyas"
     FROM 
         "Payment" p
@@ -70,13 +70,6 @@ FROM (
         AND (
             p."addonCourseIds" = '{4181}' OR
             p."addonCourseIds" = '{4181,6293}' OR  
-					
-					
-					
-					
-					
-					
-					
             p."addonCourseIds" = '{6293}'
         )
     GROUP BY 

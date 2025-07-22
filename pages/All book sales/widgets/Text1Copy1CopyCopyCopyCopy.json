@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 77,
+  "bottomRow": 143,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -52,13 +52,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "Hybrid Addon New",
+  "text": "Hybrid CO New",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 73,
+  "topRow": 139,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "xfrnavyhyf",
-  "widgetName": "Text1Copy1Copy"
+  "widgetId": "hts25jxkh2",
+  "widgetName": "Text1Copy1CopyCopyCopyCopy"
 }

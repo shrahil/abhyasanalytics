@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 77,
+  "bottomRow": 182,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -25,7 +25,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "4te2gycj25",
-  "leftColumn": 29,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,15 +33,15 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 9,
   "mobileTopRow": 11,
-  "originalBottomRow": 108,
-  "originalTopRow": 103,
+  "originalBottomRow": 182,
+  "originalTopRow": 178,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 42,
+  "rightColumn": 14,
   "searchTags": [
     "typography",
     "paragraph",
@@ -52,13 +52,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "Hybrid Addon New",
+  "text": "Hybrid CO Addon Renew",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 73,
+  "topRow": 178,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "xfrnavyhyf",
-  "widgetName": "Text1Copy1Copy"
+  "widgetId": "wjl1aigra3",
+  "widgetName": "Text1Copy1CopyCopyCopyCopyCopy"
 }

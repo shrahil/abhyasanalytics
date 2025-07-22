@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    p.\"id\", \n    p.\"amount\", \n    p.\"paymentForId\", \n    p.\"courseOfferId\", \n    p.\"addonCourseIds\",\n    c.\"title\"\nFROM \"Payment\" p\nJOIN \"CourseOffer\" c ON c.\"id\" = p.\"courseOfferId\"\nWHERE p.\"paymentForId\" = '3125' \n    AND p.\"courseOfferId\" IN (1265408, 12663356)\n    AND (\n        p.\"addonCourseIds\" = '{4181}' OR\n        p.\"addonCourseIds\" = '{4181,6293}' OR  \n        p.\"addonCourseIds\" = '{6293}'\n    )\n\t\tAND p.\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' \n    AND p.\"createdAt\" <= {{moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' \n    AND p.\"status\" = 'responseReceivedSuccess';",
+      "body": "SELECT \n    p.\"id\", \n    p.\"amount\", \n    p.\"paymentForId\", \n    p.\"courseOfferId\",\n    c.\"title\",\n\t\tc.\"parentCourseOfferId\",\n\t\tp.\"shipmentId\"\nFROM \"Payment\" p\nJOIN \"CourseOffer\" c ON c.\"id\" = p.\"courseOfferId\"\nWHERE p.\"paymentForId\" = '3125' \n    AND p.\"shipmentId\" IS NOT NULL\n\t\tAND p.\"createdAt\" >= {{moment(DatePicker1.selectedDate).format(\"YYYY-MM-DD\")}}::date - interval '330 minutes' \n    AND p.\"createdAt\" <= {{moment(DatePicker2.selectedDate).format(\"YYYY-MM-DD\")}}::date + interval '1110 minutes' \n    AND p.\"status\" = 'responseReceivedSuccess'\n\t\tAND c.\"parentCourseOfferId\" = 12846697\n\t\tAND p.\"addonCourseIds\" IS NULL LIMIT 100;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -29,7 +29,7 @@
     ],
     "name": "Query3",
     "pageId": "All book sales",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

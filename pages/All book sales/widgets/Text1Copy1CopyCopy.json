@@ -25,7 +25,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "4te2gycj25",
-  "leftColumn": 31,
+  "leftColumn": 29,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -41,7 +41,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 44,
+  "rightColumn": 42,
   "searchTags": [
     "typography",
     "paragraph",
@@ -52,7 +52,7 @@
     "Suggested",
     "Content"
   ],
-  "text": "Hybrid Renewals",
+  "text": "Hybrid Addon Renewals",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 105,
