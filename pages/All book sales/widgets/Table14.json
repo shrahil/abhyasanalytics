@@ -358,7 +358,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{Hybrid_New.data}}",
+  "tableData": "{{Hybrid_New_AddOn.data}}",
   "textSize": "0.875rem",
   "topRow": 77,
   "totalRecordsCount": 0,

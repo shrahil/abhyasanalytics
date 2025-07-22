@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6492e2637204916015a22d5b_8eeadc9d-02bf-4cd1-849c-f48903e85532",
-  "id": "All book sales_Hybrid_Renewals",
+  "id": "All book sales_Hybrid_Renewals_AddOn",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Hybrid_Renewals",
+    "name": "Hybrid_Renewals_AddOn",
     "pageId": "All book sales",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

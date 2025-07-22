@@ -282,7 +282,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 59,
   "searchKey": "",
-  "tableData": "{{Hybrid_Renewals.data}}",
+  "tableData": "{{Hybrid_Renewals_AddOn.data}}",
   "textSize": "0.875rem",
   "topRow": 110,
   "totalRecordsCount": 0,

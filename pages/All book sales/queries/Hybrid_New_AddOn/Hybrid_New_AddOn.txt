@@ -1,0 +1,89 @@
+SELECT 
+    p."amount" AS "amount",p."addonCourseIds", 
+    COUNT(p.id) AS "count", 
+    c."title", 
+    p."amount" * COUNT(p.id) AS "productRevenue",
+    CASE
+        WHEN p."addonCourseIds" = '{4181}' THEN COUNT(p.id) * 1499
+        WHEN p."addonCourseIds" = '{4181,6293}' THEN COUNT(p.id) * 2498     
+        WHEN p."addonCourseIds" = '{6293}' THEN COUNT(p.id) * 999    
+        ELSE 0
+    END AS "book_share_abhyas",
+    CASE
+        WHEN p."addonCourseIds" = '{4181}' THEN (p."amount" - 1499) * COUNT(p.id)
+        WHEN p."addonCourseIds" = '{4181,6293}' THEN (p."amount" - 2499) * COUNT(p.id)   
+        WHEN p."addonCourseIds" = '{6293}' THEN (p."amount" - 1499) * COUNT(p.id)   
+        ELSE 0
+    END AS "digital_revenue_abhyas"
+FROM 
+    "Payment" p
+JOIN 
+    "CourseOffer" c 
+    ON c."id" = p."courseOfferId"
+WHERE 
+    p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+    AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+    AND p."status" = 'responseReceivedSuccess' 
+    AND p."paymentForId" = '3125'
+		AND p."courseOfferId" IN (1265408, 12663356)
+    AND (
+			p."addonCourseIds" = '{4181}' OR
+			p."addonCourseIds" = '{4181,6293}' OR  
+			p."addonCourseIds" = '{6293}'
+		)
+GROUP BY 
+    p."amount", c."title", p."addonCourseIds"
+
+UNION ALL
+
+SELECT 
+    NULL AS "amount",NULL as "addonCourseIds",
+    COUNT(TotalCalculation."id") AS "count", 
+    'Total' AS "title", 
+    SUM("productRevenue") AS "productRevenue",  -- Sum product revenue
+    SUM("book_share_abhyas") AS "book_share_abhyas",  -- Sum book share revenue
+    SUM("digital_revenue_abhyas") AS "digital_revenue_abhyas"  -- Sum digital revenue
+FROM (
+	SELECT 
+	p."id", p."amount" * COUNT(p.id) AS "productRevenue",
+	CASE
+	WHEN p."addonCourseIds" = '{4181}' THEN COUNT(p.id) * 1499
+	WHEN p."addonCourseIds" = '{4181,6293}' THEN COUNT(p.id) * 2498     
+	WHEN p."addonCourseIds" = '{6293}' THEN COUNT(p.id) * 999    
+	ELSE 0
+	END AS "book_share_abhyas",
+	CASE
+	WHEN p."addonCourseIds" = '{4181}' THEN (p."amount" - 1499) * COUNT(p.id)
+	WHEN p."addonCourseIds" = '{4181,6293}' THEN (p."amount" - 2499) * COUNT(p.id)   
+	WHEN p."addonCourseIds" = '{6293}' THEN (p."amount" - 1499) * COUNT(p.id)   
+	ELSE 0
+	END AS "digital_revenue_abhyas"
+	FROM 
+	"Payment" p
+	JOIN 
+	"CourseOffer" c 
+	ON c."id" = p."courseOfferId"
+	WHERE 
+	p."createdAt" >= {{moment(DatePicker1.selectedDate).format("YYYY-MM-DD")}}::date - interval '330 minutes' 
+	AND p."createdAt" <= {{moment(DatePicker2.selectedDate).format("YYYY-MM-DD")}}::date + interval '1110 minutes' 
+	AND p."status" = 'responseReceivedSuccess' 
+	AND p."courseOfferId" IN (1265408, 12663356)
+	AND p."paymentForId" = '3125'
+	AND (
+		p."addonCourseIds" = '{4181}' OR
+		p."addonCourseIds" = '{4181,6293}' OR  
+
+
+
+
+
+
+
+		p."addonCourseIds" = '{6293}'
+	)
+	GROUP BY 
+	p."addonCourseIds",p."amount",p."id"
+) AS TotalCalculation 
+
+ORDER BY 
+    "productRevenue" DESC;

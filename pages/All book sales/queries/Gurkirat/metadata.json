@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6492e2637204916015a22d5b_277e122e-035b-4618-897a-493c472cdff3",
-  "id": "All book sales_Hybrid_New",
+  "gitSyncId": "6492e2637204916015a22d5b_372be895-b0e5-47b7-8f49-3aa76ed52db8",
+  "id": "All book sales_Gurkirat",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "Hybrid_New",
+    "name": "Gurkirat",
     "pageId": "All book sales",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
